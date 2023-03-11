@@ -16,6 +16,29 @@
 			height: auto;
 		}
 	</style>
+	<script>
+        function guardarValor() {
+        
+        var pin = document.getElementById("pin").value;
+       
+        // Cierra el modal
+        $("#myModal").modal("hide");
+      }
+      
+      // Cierra el modal cuando se hace clic fuera de él
+      $("#myModal").on("click", function (e) {
+        if (e.target === this) {
+          $("#myModal").modal("hide");
+        }
+      });
+      
+      // Cierra el modal cuando se presiona la tecla "Esc"
+      $(document).on("keydown", function (e) {
+        if (e.key === "Escape") {
+          $("#myModal").modal("hide");
+        }
+      });</script>
+
 </head>
 <body>
 	<!-- Cabecera -->
@@ -47,24 +70,49 @@
 	<main class="container mt-4">
 		<div class="row">
 			<div class="col-md-6 col-lg-4 mb-4">
-				<img src="imgs/pintura.jpg" alt="Imagen 1" class="img-fluid">
+				<img src="imgs/pintura.jpg" alt="Imagen 1" class="img-fluid modal-image" data-toggle="modal" data-target="#myModal">
 			</div>
 			<div class="col-md-6 col-lg-4 mb-4">
-				<img src="imgs/pintura.jpg" alt="Imagen 2" class="img-fluid">
+				<img src="imgs/pintura.jpg" alt="Imagen 2" class="img-fluid modal-image" data-toggle="modal" data-target="#myModal">
 			</div>
 			<div class="col-md-6 col-lg-4 mb-4">
-				<img src="imgs/pintura.jpg" alt="Imagen 3" class="img-fluid">
+				<img src="imgs/pintura.jpg" alt="Imagen 3" class="img-fluid modal-image" data-toggle="modal" data-target="#myModal">
 			</div>
 			<div class="col-md-6 col-lg-4 mb-4">
-				<img src="imgs/pintura.jpg"alt="Imagen 4" class="img-fluid">
+				<img src="imgs/pintura.jpg"alt="Imagen 4" class="img-fluid modal-image" data-toggle="modal" data-target="#myModal">
 			</div>
 			<div class="col-md-6 col-lg-4 mb-4">
-				<img src="imgs/pintura.jpg" alt="Imagen 5" class="img-fluid">
+				<img src="imgs/pintura.jpg" alt="Imagen 5" class="img-fluid modal-image" data-toggle="modal" data-target="#myModal">
 			</div>
 			<div class="col-md-6 col-lg-4 mb-4">
-				<img src="imgs/pintura.jpg" alt="Imagen 6" class="img-fluid">
+				<img src="imgs/pintura.jpg" alt="Imagen 6" class="img-fluid modal-image" data-toggle="modal" data-target="#myModal">
 			</div>
 		</div>
 	</main>
+
+	    <!--modal de imagen-->
+		<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <h5 class="modal-title" id="exampleModalLabel">INSCRIPCION A TALLER</h5>
+				  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				  </button>
+				</div>
+				<div class="modal-body">
+				  
+				  <div class="form-group">
+					<label for="pin">PIN:</label>
+					<input type="password" class="form-control" id="pin" placeholder="Ingresa tu PIN">
+				  </div>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+				  <button type="button" class="btn btn-primary" onclick="guardarValor()">Inscribirse</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
 </body>
 </html>
