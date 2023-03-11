@@ -4,8 +4,7 @@
 	<title>Gestion de Talleres</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -15,139 +14,57 @@
 		.img-fluid {
 			width: 100%;
 			height: auto;
-           
-                width: 500px;
-                height: 500px;
-                object-fit: cover;
-              }
-		
-        .d-none-lg {
-            display: none;
-          }
-        .modal-image {
-            cursor: pointer;
-            
-          }
-        .image-container i {
-            font-size: 1.5rem;
-            color: #333;
-            background-color: #fff;
-            border-radius: 50%;
-            padding: 5px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-          }
-
-        .icon-info {
-            position: absolute;
-            top: 0;
-            left: 0;
-            margin: 10px;
-            font-size: 24px;
-            color: white;
-          }
+		}
 	</style>
-
-   
-    <script>
-        function guardarValor() {
-        
-        var pin = document.getElementById("pin").value;
-       
-        // Cierra el modal
-        $("#myModal").modal("hide");
-      }
-      
-      // Cierra el modal cuando se hace clic fuera de él
-      $("#myModal").on("click", function (e) {
-        if (e.target === this) {
-          $("#myModal").modal("hide");
-        }
-      });
-      
-      // Cierra el modal cuando se presiona la tecla "Esc"
-      $(document).on("keydown", function (e) {
-        if (e.key === "Escape") {
-          $("#myModal").modal("hide");
-        }
-      });</script>
-
 </head>
 <body>
 	<!-- Cabecera -->
-    <header class="d-none d-md-block d-none-lg">
+	<header>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<a class="navbar-brand" href="#">Logo Empresa</a>
+			<a class="navbar-brand" href="#">Mi página web</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav">
 					<li class="nav-item active">
-						<a class="nav-link" href="#">Talleres</a>
+						<a class="nav-link" href="#">Inicio</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Panel</a>
+						<a class="nav-link" href="#">Acerca de</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Usuario</a>
+						<a class="nav-link" href="#">Servicios</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Soporte</a>
+						<a class="nav-link" href="#">Contacto</a>
 					</li>
 				</ul>
 			</div>
 		</nav>
 	</header>
-	
 	<!-- Contenido principal -->
 	<main class="container mt-4">
 		<div class="row">
 			<div class="col-md-6 col-lg-4 mb-4">
-                <i class="fas fa-star" style="position: absolute; top: 0; left: 0;"></i>
-                  <img src="/tests/imgs/pintura.jpg" alt="Imagen 1" class="img-fluid modal-image" data-toggle="modal" data-target="#myModal">
-                 
-              </div>
-			<div class="col-md-6 col-lg-4 mb-4">
-				<img src="/tests/imgs/pintura.jpg" alt="Imagen 2" class="img-fluid modal-image" data-toggle="modal" data-target="#myModal">
+				<img src="imgs/pintura.jpg" alt="Imagen 1" class="img-fluid">
 			</div>
 			<div class="col-md-6 col-lg-4 mb-4">
-				<img src="/tests/imgs/pintura.jpg" alt="Imagen 3" class="img-fluid modal-image" data-toggle="modal" data-target="#myModal">
+				<img src="imgs/pintura.jpg" alt="Imagen 2" class="img-fluid">
 			</div>
 			<div class="col-md-6 col-lg-4 mb-4">
-				<img src="/tests/imgs/pintura.jpg" alt="Imagen 4" class="img-fluid modal-image" data-toggle="modal" data-target="#myModal">
+				<img src="imgs/pintura.jpg" alt="Imagen 3" class="img-fluid">
 			</div>
 			<div class="col-md-6 col-lg-4 mb-4">
-				<img src="/tests/imgs/pintura.jpg" alt="Imagen 5" class="img-fluid modal-image" data-toggle="modal" data-target="#myModal">
+				<img src="imgs/pintura.jpg"alt="Imagen 4" class="img-fluid">
 			</div>
 			<div class="col-md-6 col-lg-4 mb-4">
-				<img src="/tests/imgs/pintura.jpg" alt="Imagen 6" class="img-fluid modal-image" data-toggle="modal" data-target="#myModal">
+				<img src="imgs/pintura.jpg" alt="Imagen 5" class="img-fluid">
+			</div>
+			<div class="col-md-6 col-lg-4 mb-4">
+				<img src="imgs/pintura.jpg" alt="Imagen 6" class="img-fluid">
 			</div>
 		</div>
 	</main>
-
-    <!--modal de imagen-->
-    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">INSCRIPCION A TALLER</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              
-              <div class="form-group">
-                <label for="pin">PIN:</label>
-                <input type="password" class="form-control" id="pin" placeholder="Ingresa tu PIN">
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-              <button type="button" class="btn btn-primary" onclick="guardarValor()">Inscribirse</button>
-            </div>
-          </div>
-        </div>
-      </div>
 </body>
 </html>
