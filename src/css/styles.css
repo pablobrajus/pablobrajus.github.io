@@ -16,24 +16,3 @@
     -webkit-animation: 0.75s linear infinite spinner-border;
     animation: 0.75s linear infinite spinner-border;
   }
-  .texto {
-    position: relative;
- }
- 
- .texto h3 {
-    font-size: 2em;
-    color: #000;
-    position: absolute;
-    color:blue;
-    transform: translate(-50%, -50%);
-    animation: girar 2s ease-in-out forwards;
- }
- 
- @keyframes girar {
-    0% {
-       transform: translate(-50%, -50%) rotate(0deg);
-    }
-    100% {
-       transform: translate(-50%, -50%) rotate(360deg);
-    }
- }
