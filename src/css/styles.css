@@ -1,0 +1,18 @@
+.center-row {
+    height: 100vh; /* Establece la altura de la fila como el 100% del viewport height (altura de la ventana del navegador) */
+    display: flex; /* Establece el modo de visualización como "flex" */
+    align-items: center; /* Centra los elementos verticalmente */
+    justify-content: center; /* Centra los elementos horizontalmente */
+  }
+ 
+  .spinner-border {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    vertical-align: -0.125em;
+    border: 0.25em solid white;
+    border-right-color: transparent;
+    border-radius: 50%;
+    -webkit-animation: 0.75s linear infinite spinner-border;
+    animation: 0.75s linear infinite spinner-border;
+  }
